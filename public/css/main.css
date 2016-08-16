@@ -1,16 +1,13 @@
 @import "https://fonts.googleapis.com/css?family=Roboto+Mono";
 html {
-  box-sizing: border-box;
-  height: 100%; }
-
-body {
-  min-height: 100%; }
+  box-sizing: border-box; }
 
 header {
   display: flex;
   justify-content: center;
   width: auto;
-  background-color: #fcfcfc;
+  color: auto;
+  background-color: #fafafa;
   border-bottom: #30638e 20px solid;
   padding-bottom: 0.5vw;
   font-family: 'Roboto Mono', monospace; }
@@ -50,13 +47,8 @@ main {
   display: flex;
   justify-content: center;
   width: auto;
-  background-color: #072638;
-  color: #fcfcfc; }
-
-.dashboard {
-  display: flex;
-  justify-content: space-between;
-  width: 80%; }
+  color: #fafafa;
+  background-color: #072638; }
 
 .home {
   display: flex;
@@ -64,18 +56,54 @@ main {
   width: 80%;
   flex-direction: column;
   align-items: center; }
+  .home form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    color: #2e3e42;
+    background-color: #fafafa;
+    margin: 1vw 0;
+    border: 10px #fafafa solid; }
+    .home form input, .home form button {
+      margin-bottom: 1vw; }
+    .home form button {
+      color: #fafafa;
+      background-color: #30638e;
+      font-weight: bold;
+      border: 0;
+      padding: .5vw; }
+      .home form button:hover {
+        color: black;
+        background-color: #36bcd0; }
+  .home .description {
+    width: 80%; }
+
+.btns {
+  display: flex;
+  justify-content: center;
+  width: 80%; }
+  .btns .bigbtn {
+    color: #fafafa;
+    background-color: #30638e;
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    border: 0; }
+    .btns .bigbtn:hover {
+      color: black;
+      background-color: #36bcd0; }
 
 section {
   width: 20%;
-  background-color: #fcfcfc;
   color: #2e3e42;
+  background-color: #fafafa;
   padding: 1vw;
   margin: 2vw 0;
-  border: 10px #fcfcfc solid; }
+  border: 10px #fafafa solid; }
   section .alert {
     border: 10px #d13a4e solid; }
-
-.description {
-  width: 80%; }
 
 /*# sourceMappingURL=main.css.map */

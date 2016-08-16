@@ -1,7 +1,39 @@
 <div class="home">
+
+  <div class="btns">
+    <button class="bigbtn notSelected"
+      ng-click="isLoginOpen = !isLoginOpen; isSignupOpen = false">
+      Login
+    </button>
+    <button class="bigbtn notSelected"
+      ng-click="isSignupOpen = !isSignupOpen; isLoginOpen = false">
+      Signup
+    </button>
+  </div>
+
+  <form ng-show="isLoginOpen" novalidate name="loginUser" ng-submit="">
+    <center>Login</center>
+    <label for='username'> Username </label>
+      <input type="text" name='username'>
+    <label for='password'> Password </label>
+      <input type='text' name='password'>
+    <button type='submit'> Login </button>
+  </form>
+
+  <form ng-show="isSignupOpen" novalidate name='addNewuser' ng-submit='addUser(view.form)'>
+    <center>Signup</center>
+    <label for='username'> Username </label>
+      <input type="text" ng-model='view.form.username'>
+    <label for='password'> Password </label>
+      <input type='text' ng-model='view.form.password'>
+    <label for='zip'> Zip Code </label>
+      <input type='number' ng-model='view.form.zip'>
+    <button type='submit'> Submit </button>
+  </form>
+
   <section class="description">
-    <p>Description of company/app</p>
+    <p>Description of company/app:
+      <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </section>
-  <a href='#/home/login'><h2> Login </h2></a>
-  <a href='#/home/signup'><h2> Signup </h2></a>
+
 </div>
