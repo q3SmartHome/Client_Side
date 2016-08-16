@@ -1,0 +1,18 @@
+<h1>Signup Page</h1>
+
+
+<form novalidate name='addNewuser' ng-submit='addUser(view.form)'>
+  <label for='username'> Username </label>
+  <input type="text" ng-model='view.form.username' placeholder='username'>
+  <label for='password'> Password </label>
+  <input type='text' ng-model='view.form.password' placeholer='password'>
+  <label for='zip'> Zip Code </label>
+  <input type='number' ng-model='view.form.zip' placeholder="zip code">
+  <button type='submit'> Submit </button>
+</form>
+
+
+{{view.form}}
+
+<h3> Fake user database </h3>
+<p>{{users}}</p>
