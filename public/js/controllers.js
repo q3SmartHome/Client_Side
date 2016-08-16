@@ -26,7 +26,7 @@ app.controller('DashboardController', function($scope, $firebaseObject) {
   var firebaseLights = new Firebase(
     'https://smarthomedenver.firebaseio.com/lights'
   );
-  $scope.data3 = $firebaseObject(firebaseDoors);
+  $scope.data3 = $firebaseObject(firebaseLights);
 
   $scope.view = 'Dashboard Controller';
 });
