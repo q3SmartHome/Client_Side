@@ -1,0 +1,88 @@
+@import "mixins";
+@import "colors";
+@import "font";
+
+html{
+  box-sizing: border-box;
+  height:100%;
+}
+
+body{
+  min-height: 100%;
+}
+
+header{
+  @include flex-width(center, auto);
+  background-color: $white;
+  border-bottom: $slate 20px solid;
+  padding-bottom: 0.5vw;
+  font-family: 'Roboto Mono', monospace;
+}
+
+nav{
+  @include flex-width(space-between, 80%);
+  align-items: flex-end;
+  .brand{
+    display: flex;
+    align-items: center;
+    margin:0.5vw;
+    .logo{
+      height:5vw;
+      width: 5vw;
+    }
+    h1{
+      color:$lightblue;
+      padding-left: 1vw;
+      margin: 0;
+    }
+  }
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li{
+      display: inline;
+      padding-left: 1vw;
+      color: $lightblue;
+    }
+  }
+}
+
+a{
+  text-decoration: none;
+  color:$lightblue;
+  &:hover{
+    color: $yellow;
+  }
+}
+
+main{
+  @include flex-width(center, auto);
+  background-color: $darkblue;
+  color: $white;
+}
+
+.dashboard{
+  @include flex-width(space-between, 80%);
+}
+.home{
+  @include flex-width(center, 80%);
+  flex-direction: column;
+  align-items: center;
+}
+
+section{
+  width: 20%;
+  background-color: $white;
+  color: $gray;
+  padding: 1vw;
+  margin: 2vw 0;
+  border: 10px $white solid;
+  .alert{
+    border: 10px $red solid;
+  }
+}
+
+.description{
+  width:80%;
+}
