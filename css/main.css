@@ -1,0 +1,81 @@
+@import "https://fonts.googleapis.com/css?family=Roboto+Mono";
+html {
+  box-sizing: border-box;
+  height: 100%; }
+
+body {
+  min-height: 100%; }
+
+header {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  background-color: #fcfcfc;
+  border-bottom: #30638e 20px solid;
+  padding-bottom: 0.5vw;
+  font-family: 'Roboto Mono', monospace; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: flex-end; }
+  nav .brand {
+    display: flex;
+    align-items: center;
+    margin: 0.5vw; }
+    nav .brand .logo {
+      height: 5vw;
+      width: 5vw; }
+    nav .brand h1 {
+      color: #36bcd0;
+      padding-left: 1vw;
+      margin: 0; }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    nav ul li {
+      display: inline;
+      padding-left: 1vw;
+      color: #36bcd0; }
+
+a {
+  text-decoration: none;
+  color: #36bcd0; }
+  a:hover {
+    color: #edae49; }
+
+main {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  background-color: #072638;
+  color: #fcfcfc; }
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  width: 80%; }
+
+.home {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  flex-direction: column;
+  align-items: center; }
+
+section {
+  width: 20%;
+  background-color: #fcfcfc;
+  color: #2e3e42;
+  padding: 1vw;
+  margin: 2vw 0;
+  border: 10px #fcfcfc solid; }
+  section .alert {
+    border: 10px #d13a4e solid; }
+
+.description {
+  width: 80%; }
+
+/*# sourceMappingURL=main.css.map */
