@@ -3,3 +3,8 @@
   justify-content: $justify;
   width: $width;
 }
+
+@mixin colors($color, $background){
+  color: $color;
+  background-color: $background;
+}
