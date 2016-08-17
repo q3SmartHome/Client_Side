@@ -1,4 +1,9 @@
-angular.module("homeApp", ["firebase", "ui.router"])
+angular.module("homeApp", [
+  "firebase",
+  "ui.router",
+  "homeApp.SignupService",
+  "homeApp.LoginService"
+])
 .config(function($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise('/home');
