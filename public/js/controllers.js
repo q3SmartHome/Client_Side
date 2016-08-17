@@ -1,15 +1,7 @@
-app.controller("MainController", function($scope, $firebaseObject) {
- $scope.view = 'Hello';
-});
-
-app.controller("SignupController", function($scope, factory) {
- $scope.view = {};
- $scope.addUser = factory.addUser;
- $scope.users = factory.users();
-});
-
-app.controller("LoginController", function($scope) {
- $scope.view = 'Login';
+app.controller("MainController", function($scope, $firebaseObject, factory) {
+  $scope.view = [];
+  $scope.addUser = factory.addUser;
+  $scope.users = factory.users();
 });
 
 app.controller('DashboardController', function($scope, $firebaseObject) {

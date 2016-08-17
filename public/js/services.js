@@ -11,15 +11,15 @@ angular
 
   return {
 
-  users: function() {
-    return users;
-  },
-  addUser: function(form) {
-    console.log(form);
-    users.push({id: ++counter, username: form.username, password: form.password, zip: form.zip});
-    form.username = '';
-    form.password = '';
-    form.zip = '';
-  }
-};
+    users: function() {
+      return users;
+    },
+    addUser: function(form) {
+      console.log(form);
+      users.push({id: ++counter, username: form.username, password: form.password, zip: form.zip});
+      form.username = '';
+      form.password = '';
+      form.zip = '';
+    }
+  };
 });
