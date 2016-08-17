@@ -11,24 +11,24 @@
     </button>
   </div>
 
-  <form ng-show="isLoginOpen" novalidate name="loginUser" ng-submit="">
+  <form ng-show="isLoginOpen" name="loginUser">
     <center>Login</center>
-    <label for='username'> Username </label>
-      <input type="text" name='username'>
-    <label for='password'> Password </label>
-      <input type='text' name='password'>
-    <button type='submit'> Login </button>
+    <label for="username"> Username </label>
+      <input type="text" name="username">
+    <label for="password"> Password </label>
+      <input type="text" name="password">
+    <button type="password"> Login </button>
   </form>
 
   <form ng-show="isSignupOpen" novalidate name='addNewuser' ng-submit='addUser(view.form)'>
     <center>Signup</center>
-    <label for='username'> Username </label>
-      <input type="text" ng-model='view.form.username'>
-    <label for='password'> Password </label>
-      <input type='text' ng-model='view.form.password'>
-    <label for='zip'> Zip Code </label>
-      <input type='number' ng-model='view.form.zip'>
-    <button type='submit'> Submit </button>
+    <label for="username"> Username </label>
+      <input type="text" id="username" ng-model="view.form.username">
+    <label for="password"> Password </label>
+      <input type="text" id="password" ng-model="view.form.password">
+    <label for="zip"> Zip Code </label>
+      <input type="number" id="zip" ng-model="view.form.zip">
+    <button type="submit"> Submit </button>
   </form>
 
   <section class="description">
