@@ -20,12 +20,12 @@
     <button type="password"> Login </button>
   </form>
 
-  <form ng-show="isSignupOpen" novalidate name='addNewuser' ng-submit='addUser(view.form)'>
+  <form ng-show="isSignupOpen" novalidate name="SignupForm" ng-submit='addUser(view.form)'>
     <center>Signup</center>
     <label for="username"> Username </label>
-      <input type="text" id="username" ng-model="view.form.username">
+      <input type="text" id="username" ng-model="username">
     <label for="password"> Password </label>
-      <input type="text" id="password" ng-model="view.form.password">
+      <input type="text" id="password" ng-model="password">
     <label for="zip"> Zip Code </label>
       <input type="number" id="zip" ng-model="view.form.zip">
     <label for="phone"> Phone Number </label>

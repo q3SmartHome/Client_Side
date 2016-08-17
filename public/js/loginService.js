@@ -1,11 +1,11 @@
 (function() {
   angular
-  .module("homeApp.loginService", [])
-  .service('loginService', loginService);
+  .module("homeApp.LoginService", [])
+  .service('LoginService', LoginService);
 
-  loginService.$inject = ['$http', '$location']
+  LoginService.$inject = ['$http', '$location']
 
-  function loginService($http, $location) {
+  function LoginService($http, $location) {
     var user = {};
 
     return{

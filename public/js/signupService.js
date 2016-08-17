@@ -1,11 +1,30 @@
 (function(){
   angular
-    .module("homeApp.signupService", [])
-    .service('signupService', signupService);
+    .module("homeApp.SignupService", [])
+    .service('SignupService', SignupService);
 
-    signupService.$inject = ['$http']
+    SignupService.$inject = ['$http', 'LoginService']
 
-    function signupService($http) {
+    function SignupService($http) {
+      return {
+        createUser: createUser
+      };
 
+      function createUser(username, password, zip, phone){
+        $http({
+          method:'POST',
+          params:{
+            username: username,
+            password:password,
+            zip: zip,
+            phone: phone
+          },
+          url: "http://localhost:3000/auth/signup"
+        }).then(function(reponse){
+          LoginService.loginUser(username, password);
+        }, function(err){
+          return err;
+        });
+      }
     }
 })();
