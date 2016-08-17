@@ -45,6 +45,27 @@ main {
   color: #fafafa;
   background-color: #072638; }
 
+.dashboard {
+  width: 80%; }
+  .dashboard h1 {
+    font-family: 'Roboto Mono', monospace; }
+
+.modules {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  .modules section {
+    width: 23%;
+    color: #2e3e42;
+    background-color: #fafafa;
+    padding: 0 1vw;
+    margin: 2vw 0 5vw 0;
+    border: 10px #fafafa solid; }
+    .modules section h2 {
+      height: 4vw; }
+  .modules .alert {
+    border: 10px #d13a4e solid; }
+
 .home {
   display: flex;
   justify-content: center;
