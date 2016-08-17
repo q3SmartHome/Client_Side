@@ -59,6 +59,7 @@ main{
 
 .modules{
   @include flex-width(space-between, 100%);
+  flex-wrap: wrap;
   section{
     width: 23%;
     @include colors($gray, $white);
@@ -122,4 +123,12 @@ main{
       @include colors(black, $lightblue);
     }
   }
+}
+
+.blue {
+  color: $lightblue;
+}
+
+.red {
+  color: $red;
 }
