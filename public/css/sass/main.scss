@@ -4,16 +4,11 @@
 
 html{
   box-sizing: border-box;
-  height:100%;
-}
-
-body{
-  min-height: 100%;
 }
 
 header{
   @include flex-width(center, auto);
-  background-color: $white;
+  @include colors(auto, $white);
   border-bottom: $slate 20px solid;
   padding-bottom: 0.5vw;
   font-family: 'Roboto Mono', monospace;
@@ -58,23 +53,58 @@ a{
 
 main{
   @include flex-width(center, auto);
-  background-color: $darkblue;
-  color: $white;
+  @include colors($white, $darkblue);
 }
 
-.dashboard{
-  @include flex-width(space-between, 80%);
-}
 .home{
   @include flex-width(center, 80%);
   flex-direction: column;
   align-items: center;
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    @include colors($gray, $white);
+    margin: 1vw 0;
+    border: 10px $white solid;
+    input, button{
+      margin-bottom: 1vw;
+    }
+    button{
+      @include colors($white, $slate);
+      font-weight: bold;
+      border: 0;
+      padding: .5vw;
+      &:hover{
+        @include colors(black, $lightblue);
+      }
+    }
+  }
+  .description{
+    width:80%;
+  }
+}
+
+.btns{
+  @include flex-width(center, 80%);
+  .bigbtn{
+    @include colors($white, $slate);
+    width:200px;
+    padding: 20px;
+    margin:20px;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    border: 0;
+    &:hover{
+      @include colors(black, $lightblue);
+    }
+  }
 }
 
 section{
   width: 20%;
-  background-color: $white;
-  color: $gray;
+  @include colors($gray, $white);
   padding: 1vw;
   margin: 2vw 0;
   border: 10px $white solid;
@@ -83,6 +113,6 @@ section{
   }
 }
 
-.description{
-  width:80%;
-}
+// .dashboard{
+//   @include flex-width(space-between, 80%);
+// }
