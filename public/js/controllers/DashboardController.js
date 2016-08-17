@@ -1,5 +1,5 @@
 angular.module("homeApp",[])
-  .controller('DashboardController', function($scope, $firebaseObject) {
+  .controller("DashboardController", function($scope, $firebaseObject) {
     var firebaseTemperature = new Firebase(
       'https://smarthomedenver.firebaseio.com/temperature'
     );
