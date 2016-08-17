@@ -2,8 +2,12 @@
 @import "colors";
 @import "font";
 
-html{
+*{
   box-sizing: border-box;
+}
+
+html{
+  background-color: $darkblue;
 }
 
 header{
@@ -20,7 +24,7 @@ nav{
   .brand{
     display: flex;
     align-items: center;
-    margin:0.5vw;
+    margin:0.5vw 0.5vw 0.5vw 0;
     .logo{
       height:5vw;
       width: 5vw;
@@ -29,16 +33,6 @@ nav{
       color:$lightblue;
       padding-left: 1vw;
       margin: 0;
-    }
-  }
-  ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    li{
-      display: inline;
-      padding-left: 1vw;
-      color: $lightblue;
     }
   }
 }
@@ -56,6 +50,30 @@ main{
   @include colors($white, $darkblue);
 }
 
+.dashboard{
+  width:80%;
+  h1{
+    font-family: 'Roboto Mono', monospace;
+  }
+}
+
+.modules{
+  @include flex-width(space-between, 100%);
+  section{
+    width: 23%;
+    @include colors($gray, $white);
+    padding: 0 1vw;
+    margin:2vw 0 5vw 0;
+    border: 10px $white solid;
+    h2{
+      height:4vw;
+    }
+  }
+  .alert{
+    border: 10px $red solid;
+  }
+}
+
 .home{
   @include flex-width(center, 80%);
   flex-direction: column;
@@ -65,7 +83,7 @@ main{
     flex-direction: column;
     width: 30%;
     @include colors($gray, $white);
-    margin: 1vw 0;
+    margin: 0 0 2vw 0;
     border: 10px $white solid;
     input, button{
       margin-bottom: 1vw;
@@ -81,7 +99,11 @@ main{
     }
   }
   .description{
-    width:80%;
+    width:100%;
+    @include colors($gray, $white);
+    padding: 1vw;
+    margin:0 0 5vw 0;
+    border: 10px $white solid;
   }
 }
 
@@ -91,7 +113,7 @@ main{
     @include colors($white, $slate);
     width:200px;
     padding: 20px;
-    margin:20px;
+    margin: 2vw 1vw;
     font-size: 20px;
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
@@ -101,18 +123,3 @@ main{
     }
   }
 }
-
-section{
-  width: 20%;
-  @include colors($gray, $white);
-  padding: 1vw;
-  margin: 2vw 0;
-  border: 10px $white solid;
-  .alert{
-    border: 10px $red solid;
-  }
-}
-
-// .dashboard{
-//   @include flex-width(space-between, 80%);
-// }
