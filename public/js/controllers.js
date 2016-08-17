@@ -1,15 +1,7 @@
-app.controller("MainController", function($scope, $firebaseObject) {
- $scope.view = 'Hello';
-});
-
-app.controller("SignupController", function($scope, factory) {
- $scope.view = {};
- $scope.addUser = factory.addUser;
- $scope.users = factory.users();
-});
-
-app.controller("LoginController", function($scope) {
- $scope.view = 'Login';
+app.controller("MainController", function($scope, $firebaseObject, factory) {
+  $scope.view = [];
+  $scope.addUser = factory.addUser;
+  $scope.users = factory.users();
 });
 
 app.controller('DashboardController', function($scope, $firebaseObject) {
@@ -29,4 +21,20 @@ app.controller('DashboardController', function($scope, $firebaseObject) {
   $scope.data3 = $firebaseObject(firebaseLights);
 
   $scope.view = 'Dashboard Controller';
+
+  // $scope.tempAlert = function() {
+  //   if (data.fahrenheit > 75 || data.fahrenheit < 65) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+
+  // $scope.doorAlert = function(data2) {
+  //   if (data2.doors = "closed") {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 });
