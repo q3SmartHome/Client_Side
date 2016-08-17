@@ -53,7 +53,8 @@ main {
 .modules {
   display: flex;
   justify-content: space-between;
-  width: 100%; }
+  width: 100%;
+  flex-wrap: wrap; }
   .modules section {
     width: 23%;
     color: #2e3e42;
@@ -116,5 +117,11 @@ main {
     .btns .bigbtn:hover {
       color: black;
       background-color: #36bcd0; }
+
+.blue {
+  color: #36bcd0; }
+
+.red {
+  color: #d13a4e; }
 
 /*# sourceMappingURL=main.css.map */
