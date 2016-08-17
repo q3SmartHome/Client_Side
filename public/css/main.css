@@ -31,14 +31,6 @@ nav {
       color: #36bcd0;
       padding-left: 1vw;
       margin: 0; }
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-    nav ul li {
-      display: inline;
-      padding-left: 1vw;
-      color: #36bcd0; }
 
 a {
   text-decoration: none;
