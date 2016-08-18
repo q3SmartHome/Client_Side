@@ -1,9 +1,10 @@
-angular.module("homeApp")
-  .controller("DashboardController", DashboardController)
+angular
+  .module("homeApp")
+  .controller("DashboardController", DashboardController);
 
-  DashboardController.$inject = ["$scope", "$firebaseObject"];
+  DashboardController.$inject = ["$scope", "$firebaseObject", "LoginService", "WeatherService"];
 
-  function DashboardController ($scope, $firebaseObject){
+  function DashboardController ($scope, $firebaseObject, LoginService, WeatherService){
     var firebaseTemperature = new Firebase(
       'https://smarthomedenver.firebaseio.com/temperature'
     );
@@ -21,19 +22,8 @@ angular.module("homeApp")
 
     $scope.view = 'Dashboard Controller';
 
-    // $scope.tempAlert = function() {
-    //   if (data.fahrenheit > 75 || data.fahrenheit < 65) {
-    //     return true;
-    //   } else {
-    //     return false;
-    //   }
-    // }
+    $scope.weatherData = WeatherService.getWeather();
 
-    // $scope.doorAlert = function(data2) {
-    //   if (data2.doors = "closed") {
-    //     return true;
-    //   } else {
-    //     return false;
-    //   }
-    // }
-  };
+    $scope.user = LoginService.getUser();
+
+  }
