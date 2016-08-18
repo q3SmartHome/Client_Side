@@ -1,6 +1,6 @@
 (function() {
   angular
-  .module("homeApp.LoginService", [])
+  .module("homeApp")
   .service('LoginService', LoginService);
 
   LoginService.$inject = ['$http', '$location']

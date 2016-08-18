@@ -1,5 +1,9 @@
-angular.module("homeApp",[])
-  .controller("DashboardController", function($scope, $firebaseObject) {
+angular.module("homeApp")
+  .controller("DashboardController", DashboardController)
+
+  DashboardController.$inject = ["$scope", "$firebaseObject"];
+
+  function DashboardController ($scope, firebaseObject){
     var firebaseTemperature = new Firebase(
       'https://smarthomedenver.firebaseio.com/temperature'
     );
@@ -32,4 +36,4 @@ angular.module("homeApp",[])
     //     return false;
     //   }
     // }
-  });
+  };

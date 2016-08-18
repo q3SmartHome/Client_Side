@@ -1,5 +1,5 @@
 (function(){
-  angular.module("homeApp",[])
+  angular.module("homeApp")
     .controller("MainController", MainController)
 
     MainController.$inject = ["$scope", "LoginService", "SignupService"];
