@@ -1,4 +1,8 @@
 @import "https://fonts.googleapis.com/css?family=Roboto+Mono";
+.card, .modules section, .home .description {
+  border-radius: 3px;
+  border: 5px #edae49 solid; }
+
 * {
   box-sizing: border-box; }
 
@@ -58,13 +62,14 @@ main {
   width: 100%;
   flex-wrap: wrap; }
   .modules section {
-    width: 23%;
+    width: 16rem;
     color: #2e3e42;
     background-color: #fafafa;
     padding: 1vw;
-    margin: 1vw 0 1vw 0;
-    border: 5px #edae49 solid;
-    border-radius: 3px; }
+    margin: 1vw 1vw 1vw 0; }
+    .modules section h2 {
+      font-size: 2rem;
+      color: #072638; }
   .modules .alert {
     border: 10px #d13a4e solid; }
 
@@ -112,9 +117,7 @@ main {
     color: #2e3e42;
     background-color: #fafafa;
     padding: 1vw;
-    margin: 0 0 5vw 0;
-    border: 5px #edae49 solid;
-    border-radius: 3px; }
+    margin: 0 0 5vw 0; }
 
 .btns {
   display: flex;
@@ -134,11 +137,5 @@ main {
     .btns .bigbtn:hover {
       color: black;
       background-color: #36bcd0; }
-
-.blue {
-  color: #36bcd0; }
-
-.red {
-  color: #d13a4e; }
 
 /*# sourceMappingURL=main.css.map */
