@@ -11,33 +11,31 @@
     </button>
   </div>
 
-  <form ng-show="isLoginOpen" name="loginUser">
+  <form ng-show="isLoginOpen" name="loginUser" ng-submit="loginUser()">
     <center>Login</center>
     <label for="username"> Username </label>
-      <input type="text" name="username">
+      <input type="text" name="username" ng-model="username">
     <label for="password"> Password </label>
-      <input type="text" name="password">
+      <input type="text" name="password" ng-model="password">
     <button type="password"> Login </button>
   </form>
 
-  <form ng-show="isSignupOpen" novalidate name='addNewuser' ng-submit='addUser(view.form)'>
+  <form ng-show="isSignupOpen" novalidate name="SignupForm" ng-submit="addUser(username, password, zip, phone)">
     <center>Signup</center>
     <label for="username"> Username </label>
-      <input type="text" id="username" ng-model="view.form.username">
+      <input type="text" id="username" ng-model="username">
     <label for="password"> Password </label>
-      <input type="text" id="password" ng-model="view.form.password">
+      <input type="text" id="password" ng-model="password">
     <label for="zip"> Zip Code </label>
-      <input type="number" id="zip" ng-model="view.form.zip">
+      <input type="number" id="zip" ng-model="zip">
     <label for="phone"> Phone Number </label>
-      <input type="number" ng-model='view.form.phone' placeholder="ex: (999)123-4567">
+      <input type="number" id="phone" ng-model='phone'>
     <button type="submit"> Submit </button>
   </form>
 
   <section class="description">
-    <p>Description of company/app:
-      <br>SmartHome is a home automation app.  Features include the current temperature inside your home and right outside your house, monitors your open doors and includes alerts if you’ve left a door open, and looks to the weather forecast to advise you whether you need to water your lawn based on the upcoming weather forecast.
-
-      On the dashboard, users can see the temperature readings, status of their doors and any alerts.  Users can set a time limit for how long their door can be open before receiving an alert.  This is great for the forgetful person who leaves the garage door open.</p>
+    <p>SmartHome is a home automation app.  Features include the current temperature inside your home and right outside your house, monitors your open doors, includes alerts if you’ve left a door open, and looks to the weather forecast to advise you whether you need to water your lawn based on the upcoming weather forecast.<br><br>
+    On the dashboard, users can see the temperature readings, status of their doors and any alerts.  Users can set a time limit for how long their door can be open before receiving an alert.  This is great for the forgetful person who leaves the garage door open.</p>
   </section>
 
 </div>
