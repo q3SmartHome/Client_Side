@@ -3,7 +3,7 @@ angular.module("homeApp")
 
   DashboardController.$inject = ["$scope", "$firebaseObject"];
 
-  function DashboardController ($scope, firebaseObject){
+  function DashboardController ($scope, $firebaseObject){
     var firebaseTemperature = new Firebase(
       'https://smarthomedenver.firebaseio.com/temperature'
     );

@@ -5,7 +5,7 @@
 
     SignupService.$inject = ['$http', 'LoginService']
 
-    function SignupService($http) {
+    function SignupService($http, LoginService) {
       return {
         createUser: createUser
       };

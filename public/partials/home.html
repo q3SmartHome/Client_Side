@@ -11,12 +11,12 @@
     </button>
   </div>
 
-  <form ng-show="isLoginOpen" name="loginUser" ng-submit="loginUser()">
+  <form ng-show="isLoginOpen" name="loginForm" ng-submit="loginUser(username, password)">
     <center>Login</center>
     <label for="username"> Username </label>
       <input type="text" name="username" ng-model="username">
     <label for="password"> Password </label>
-      <input type="text" name="password" ng-model="password">
+      <input type="password" name="password" ng-model="password">
     <button type="password"> Login </button>
   </form>
 
@@ -25,7 +25,7 @@
     <label for="username"> Username </label>
       <input type="text" id="username" ng-model="username">
     <label for="password"> Password </label>
-      <input type="text" id="password" ng-model="password">
+      <input type="password" id="password" ng-model="password">
     <label for="zip"> Zip Code </label>
       <input type="number" id="zip" ng-model="zip">
     <label for="phone"> Phone Number </label>
