@@ -22,6 +22,7 @@ app.controller('DashboardController', function($scope, $firebaseObject) {
 
   $scope.view = 'Dashboard Controller';
 
+
   // $scope.tempAlert = function() {
   //   if (data.fahrenheit > 75 || data.fahrenheit < 65) {
   //     return true;
