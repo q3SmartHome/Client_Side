@@ -33,7 +33,9 @@
           username: username,
           password: password
         },
-        url: 'http://localhost:3000/auth/login'
+        // url: 'http://localhost:3000/auth/login'
+        url: "https://smart-home-api-server.herokuapp.com/auth/login"
+
       })
       .then(function(response){
         setUserData(response.data);

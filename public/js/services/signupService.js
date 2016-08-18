@@ -19,7 +19,8 @@
             zip: zip,
             phone: phone
           },
-          url: "http://localhost:3000/auth/signup"
+          // url: "http://localhost:3000/auth/signup"
+          url: "https://smart-home-api-server.herokuapp.com/auth/signup"
         }).then(function(reponse){
           LoginService.loginUser(username, password);
         }, function(err){
