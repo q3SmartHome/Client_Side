@@ -13,7 +13,7 @@ html{
 header{
   @include flex-width(center, auto);
   @include colors(auto, $white);
-  border-bottom: $slate 20px solid;
+  border-bottom: solid $yellow 5px;
   padding-bottom: 0.5vw;
   font-family: 'Roboto Mono', monospace;
 }
@@ -48,12 +48,14 @@ a{
 main{
   @include flex-width(center, auto);
   @include colors($white, $darkblue);
+  border-top: $slate 20px solid;
 }
 
 .dashboard{
   width:80%;
   h1{
     font-family: 'Roboto Mono', monospace;
+    margin-top: 2vw;
   }
 }
 
@@ -61,17 +63,27 @@ main{
   @include flex-width(space-between, 100%);
   flex-wrap: wrap;
   section{
-    width: 23%;
+    // min-width: 23%;
+    width:23%;
     @include colors($gray, $white);
-    padding: 0 1vw;
-    margin:2vw 0 5vw 0;
-    border: 10px $white solid;
-    h2{
-      height:4vw;
-    }
+    padding: 1vw;
+    margin:1vw 0 1vw 0;
+    border: 5px $yellow solid;
+    border-radius: 3px;
   }
   .alert{
     border: 10px $red solid;
+  }
+}
+
+.data{
+  @include flex-width(justify-content, 100%);
+  p{
+    font-size: 4vw;
+    font-family: 'Roboto Mono', monospace;
+    margin: auto;
+    padding: 1vw;
+    color: $lightblue;
   }
 }
 
@@ -86,14 +98,18 @@ main{
     @include colors($gray, $white);
     margin: 0 0 2vw 0;
     border: 10px $white solid;
+    border-radius: 3px;
     input, button{
       margin-bottom: 1vw;
+      border-radius: 3px;
+
     }
     button{
       @include colors($white, $slate);
       font-weight: bold;
       border: 0;
       padding: .5vw;
+      border-radius: 3px;
       &:hover{
         @include colors(black, $lightblue);
       }
@@ -104,7 +120,8 @@ main{
     @include colors($gray, $white);
     padding: 1vw;
     margin:0 0 5vw 0;
-    border: 10px $white solid;
+    border: 5px $yellow solid;
+    border-radius: 3px;
   }
 }
 
@@ -119,6 +136,7 @@ main{
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     border: 0;
+    border-radius: 3px;
     &:hover{
       @include colors(black, $lightblue);
     }
