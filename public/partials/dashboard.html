@@ -5,7 +5,11 @@
     <section>
       <h2>Temperature:</h2>
       <div class="data">
-        <p>{{data.fahrenheit}}°C</p>
+        <p ng-show="!Cshowing">{{data.fahrenheit}}°C</p>
+        <button  ng-click="Cshowing = !Cshowing">
+          <span ng-show="!Cshowing"> Fahrenheit </span>
+          <span ng-show="Cshowing"> Celsius </span>
+        </button>
       </div>
     </section>
     <section>

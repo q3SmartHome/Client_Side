@@ -64,29 +64,43 @@ main{
   @include flex-width(space-between, 100%);
   flex-wrap: wrap;
   section{
-    width: 16rem;
-    @include colors($gray, $white);
+    @include colors(auto, $white);
     @extend .card;
+    width: 16rem;
     padding: 1vw;
-    margin:1vw 1vw 1vw 0;
+    margin:1vw 0 1vw 0;
     h2{
       font-size: 2rem;
       color:$darkblue;
     }
   }
-  .alert{
-    border: 10px $red solid;
+}
+
+.alert{
+  @include colors($darkblue, $white);
+  border: 10px $red solid;
+  border-radius: 3px;
+  padding: 1vw 1vw 1vw 1vw;
+  h2{
+    color: $red;
+    margin-top: 0;
   }
 }
 
 .data{
   @include flex-width(justify-content, 100%);
+  flex-direction: column;
   p{
     font-size: 4vw;
     font-family: 'Roboto Mono', monospace;
     margin: auto;
     padding: 1vw;
     color: $lightblue;
+  }
+  button{
+    @extend .btn;
+    font-weight: normal;
+    outline: none;
   }
 }
 
@@ -100,22 +114,14 @@ main{
     width: 30%;
     @include colors($gray, $white);
     margin: 0 0 2vw 0;
-    border: 10px $white solid;
+    padding: 1vw;
     border-radius: 3px;
     input, button{
       margin-bottom: 1vw;
       border-radius: 3px;
-
     }
     button{
-      @include colors($white, $slate);
-      font-weight: bold;
-      border: 0;
-      padding: .5vw;
-      border-radius: 3px;
-      &:hover{
-        @include colors(black, $lightblue);
-      }
+      @extend .btn;
     }
   }
   .description{

@@ -3,6 +3,17 @@
   border-radius: 3px;
   border: 5px #edae49 solid; }
 
+.btn, .data button, .home form button {
+  color: #fafafa;
+  background-color: #30638e;
+  font-weight: bold;
+  border: 0;
+  padding: .5vw;
+  border-radius: 3px; }
+  .btn:hover, .data button:hover, .home form button:hover {
+    color: #072638;
+    background-color: #36bcd0; }
+
 * {
   box-sizing: border-box; }
 
@@ -62,27 +73,39 @@ main {
   width: 100%;
   flex-wrap: wrap; }
   .modules section {
-    width: 16rem;
-    color: #2e3e42;
+    color: auto;
     background-color: #fafafa;
+    width: 16rem;
     padding: 1vw;
-    margin: 1vw 1vw 1vw 0; }
+    margin: 1vw 0 1vw 0; }
     .modules section h2 {
       font-size: 2rem;
       color: #072638; }
-  .modules .alert {
-    border: 10px #d13a4e solid; }
+
+.alert {
+  color: #072638;
+  background-color: #fafafa;
+  border: 10px #d13a4e solid;
+  border-radius: 3px;
+  padding: 1vw 1vw 1vw 1vw; }
+  .alert h2 {
+    color: #d13a4e;
+    margin-top: 0; }
 
 .data {
   display: flex;
   justify-content: justify-content;
-  width: 100%; }
+  width: 100%;
+  flex-direction: column; }
   .data p {
     font-size: 4vw;
     font-family: 'Roboto Mono', monospace;
     margin: auto;
     padding: 1vw;
     color: #36bcd0; }
+  .data button {
+    font-weight: normal;
+    outline: none; }
 
 .home {
   display: flex;
@@ -97,21 +120,11 @@ main {
     color: #2e3e42;
     background-color: #fafafa;
     margin: 0 0 2vw 0;
-    border: 10px #fafafa solid;
+    padding: 1vw;
     border-radius: 3px; }
     .home form input, .home form button {
       margin-bottom: 1vw;
       border-radius: 3px; }
-    .home form button {
-      color: #fafafa;
-      background-color: #30638e;
-      font-weight: bold;
-      border: 0;
-      padding: .5vw;
-      border-radius: 3px; }
-      .home form button:hover {
-        color: black;
-        background-color: #36bcd0; }
   .home .description {
     width: 100%;
     color: #2e3e42;
