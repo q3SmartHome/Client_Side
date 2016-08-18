@@ -1,6 +1,7 @@
 <div class="dashboard">
-  <h1>Hello, {name}</h1>
+  <h1>Hello, {{user}}</h1>
   <div class="modules">
+
     <section>
       <h2>Temperature:</h2>
       <div class="data">
@@ -28,8 +29,10 @@
     <section class="alert">
       <h2>Alerts</h2>
     </section>
-    {{weatherData}}
+  </div>
+  <div ng-repeat='weather in weatherData'>
+    <h1>{{weather.precipIN}}</h1>
+    <h3>{{weather.avgTempF}}</h3>
+    <p>{{weather.weather}}</p>
   </div>
 </div>
-
-<h1> {{test}} </h1>
