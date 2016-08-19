@@ -10,19 +10,18 @@
         createUser: createUser
       };
 
-      function createUser(username, password, zip, phone){
+      function createUser(username, password, zip){
         $http({
           method:'POST',
           params:{
             username: username,
             password:password,
-            zip: zip,
-            phone: phone
+            zip: zip
           },
           url: "http://localhost:3000/auth/signup"
           // url: "https://smart-home-api-server.herokuapp.com/auth/signup"
-        }).then(function(reponse){
-          LoginService.loginUser(username, password, zip, phone);
+        }).then(function(response){
+          LoginService.loginUser(username, password, zip);
         }, function(err){
           return err;
         });

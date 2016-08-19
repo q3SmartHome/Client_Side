@@ -13,8 +13,7 @@
         getToken: getToken,
         getUserId: getUserId,
         getUser: getUser,
-        getZip: getZip,
-        getPhone: getPhone
+        getZip: getZip
       };
       //function to get JWT token
       function getToken(){
@@ -37,19 +36,14 @@
         return user.zip;
       }
 
-      function getPhone() {
-        return user.phone;
-      }
 
-
-      function loginUser(username, password, zip, phone){
+      function loginUser(username, password, zip){
         $http({
           method: 'POST',
           params:{
             username: username,
             password: password,
-            zip: zip,
-            phone: phone
+            zip: zip
           },
           url: 'http://localhost:3000/auth/login'
           // url: "https://smart-home-api-server.herokuapp.com/auth/login"
