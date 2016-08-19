@@ -2,9 +2,9 @@ angular
   .module("homeApp")
   .controller("DashboardController", DashboardController);
 
-  DashboardController.$inject = ["$scope", "$firebaseObject", "LoginService", "WeatherService", "$http"];
+  DashboardController.$inject = ["$scope", "$firebaseObject", "LoginService", "$http"];
 
-  function DashboardController ($scope, $firebaseObject, LoginService, WeatherService, $http){
+  function DashboardController ($scope, $firebaseObject, LoginService, $http){
     var firebaseTemperatureF = new Firebase(
       'https://smarthomedenver.firebaseio.com/temperatureF'
     );
@@ -27,9 +27,8 @@ angular
 
     $scope.view = 'Dashboard Controller';
 
-    // $scope.weatherdata = WeatherService.getWeather()
-
     $scope.user = LoginService.getUser();
+    $scope.zip = LoginService.getZip();
 
     $http({
       method:'GET',
@@ -39,12 +38,11 @@ angular
       headers: {
           Authorization: 'Bearer ' + LoginService.getToken()
       },
-      url: "http://localhost:3000/weather"
-      // url: "https://smart-home-api-server.herokuapp.com/weather"
+      // url: "http://localhost:3000/weather"
+      url: "https://smart-home-api-server.herokuapp.com/weather"
     })
     .then(function(data) {
       $scope.weatherData = data.data.response[0].periods
-      console.log($scope.weatherData);
       $scope.twoDayPrecip = $scope.weatherData[0].precipIN + $scope.weatherData[1].precipIN;
 
       function shouldWater(){
