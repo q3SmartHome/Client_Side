@@ -5,10 +5,15 @@ angular
   DashboardController.$inject = ["$scope", "$firebaseObject", "LoginService", "WeatherService", "$http"];
 
   function DashboardController ($scope, $firebaseObject, LoginService, WeatherService, $http){
-    var firebaseTemperature = new Firebase(
-      'https://smarthomedenver.firebaseio.com/temperature'
+    var firebaseTemperatureF = new Firebase(
+      'https://smarthomedenver.firebaseio.com/temperatureF'
     );
-    $scope.data = $firebaseObject(firebaseTemperature);
+    $scope.data = $firebaseObject(firebaseTemperatureF);
+
+    var firebaseTemperatureC = new Firebase(
+      'https://smarthomedenver.firebaseio.com/temperatureC'
+    );
+    $scope.data4 = $firebaseObject(firebaseTemperatureC);
 
     var firebaseDoors = new Firebase(
       'https://smarthomedenver.firebaseio.com/doors'
