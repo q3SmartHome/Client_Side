@@ -5,8 +5,8 @@
 
     function MainController($scope, LoginService, SignupService) {
 
-      $scope.addUser = function(username, password, zip, phone){
-        SignupService.createUser(username, password, zip, phone)
+      $scope.addUser = function(username, password, zip){
+        SignupService.createUser(username, password, zip)
       }
 
       $scope.loginUser = function(username, password){
