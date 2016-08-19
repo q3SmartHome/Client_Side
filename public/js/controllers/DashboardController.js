@@ -38,7 +38,17 @@ angular
       // url: "https://smart-home-api-server.herokuapp.com/weather"
     })
     .then(function(data) {
-      console.log(data.data.response[0].periods)
       $scope.weatherData = data.data.response[0].periods
+      console.log($scope.weatherData);
+      $scope.twoDayPrecip = $scope.weatherData[0].precipIN + $scope.weatherData[1].precipIN;
+
+      function shouldWater(){
+        if($scope.twoDayPrecip < 0.5){
+          return true
+        }else{
+          return false
+        }
+      }
+      $scope.water = shouldWater()
   })
 }

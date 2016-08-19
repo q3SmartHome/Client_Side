@@ -1,11 +1,13 @@
 <div class="dashboard">
   <h1>Hello, {{user}}</h1>
+  <!-- <section class="alert">
+    <h2>Alerts</h2>
+  </section> -->
   <div class="modules">
-
     <section>
       <h2>Temperature:</h2>
       <div class="data">
-        <p ng-show="!Cshowing">{{data.fahrenheit}}°C</p>
+        <p ng-show="!Cshowing">{{data.celsius}}°C</p>
         <button  ng-click="Cshowing = !Cshowing">
           <span ng-show="!Cshowing"> Fahrenheit </span>
           <span ng-show="Cshowing"> Celsius </span>
@@ -27,16 +29,23 @@
     <section>
       <h2>Sprinklers:</h2>
       <div class="data">
-        <p>{{data4.value}}</p>
+        <p ng-show="water">On</p>
+        <p ng-show="!water">Off</p>
+        <span class="precip-container">
+          <p class="precip">Upcoming Precipitation: {{twoDayPrecip}}</p>
+        </span>
       </div>
     </section>
-    <section class="alert">
-      <h2>Alerts</h2>
-    </section>
   </div>
-  <div ng-repeat='weather in weatherData'>
-    <h1>{{weather.precipIN}}</h1>
-    <h3>{{weather.avgTempF}}</h3>
-    <p>{{weather.weather}}</p>
-  </div>
+  <section class="weather">
+    <div ng-repeat='weather in weatherData' class="days">
+      <h2>{{ weather.validTime | date:'EEEE' }}</h2>
+      <h3 ng-show="Cshowing">High: {{ weather.maxTempF }}°F </h3>
+      <h3 ng-show="!Cshowing">High: {{ weather.maxTempC }}°C </h3>
+      <h3 ng-show="Cshowing">Low: {{ weather.minTempF }}°F </h3>
+      <h3 ng-show="!Cshowing">High: {{ weather.minTempC }}°C </h3>
+      <img ng-src="../images/{{weather.icon}}">
+      <p>{{weather.weather}}</p>
+    </di>
+  </section>
 </div>
