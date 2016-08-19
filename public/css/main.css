@@ -102,6 +102,8 @@ main {
     margin: auto;
     padding: 1vw;
     color: #36bcd0; }
+  .data .hidden {
+    display: none; }
   .data .precip {
     align-self: flex-end;
     font-family: sans-serif;

@@ -24,14 +24,15 @@
     <section>
       <h2>Light:</h2>
       <div class="data">
-        <p>{{data3.value}}</p>
+        <p ng-class="{hidden: data3.value >= 10}">on</p>
+        <p ng-class="{hidden: data3.value < 10}">off</p>
       </div>
     </section>
     <section>
       <h2>Sprinklers:</h2>
       <div class="data">
-        <p ng-show="water">On</p>
-        <p ng-show="!water">Off</p>
+        <p ng-show="water">on</p>
+        <p ng-show="!water">off</p>
         <span class="precip-container">
           <p class="precip">Upcoming Precipitation: {{twoDayPrecip}}</p>
         </span>

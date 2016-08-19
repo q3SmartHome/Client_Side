@@ -18,8 +18,8 @@
             password:password,
             zip: zip
           },
-          url: "http://localhost:3000/auth/signup"
-          // url: "https://smart-home-api-server.herokuapp.com/auth/signup"
+          // url: "http://localhost:3000/auth/signup"
+          url: "https://smart-home-api-server.herokuapp.com/auth/signup"
         }).then(function(response){
           LoginService.loginUser(username, password, zip);
         }, function(err){

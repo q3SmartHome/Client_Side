@@ -96,6 +96,9 @@ main{
     padding: 1vw;
     color: $lightblue;
   }
+  .hidden{
+    display: none;
+  }
   .precip{
     align-self: flex-end;
     font-family: sans-serif;

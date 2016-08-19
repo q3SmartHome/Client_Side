@@ -45,12 +45,11 @@
             password: password,
             zip: zip
           },
-          url: 'http://localhost:3000/auth/login'
-          // url: "https://smart-home-api-server.herokuapp.com/auth/login"
+          // url: 'http://localhost:3000/auth/login'
+          url: "https://smart-home-api-server.herokuapp.com/auth/login"
 
         })
         .then(function(response){
-          console.log(response);
           setUserData(response.data);
           $location.path('/dashboard')
         }, function(err){
