@@ -18,6 +18,7 @@ Technologies Used:
 
 ### Hardware Set-Up
 
+![Arduino Uno Diagram](https://github.com/q3SmartHome/Client_Side/blob/master/SmartHomeDiagram.png)
 
 ### Sass
 To run Sass with the program, ```cd``` into the css folder and run ```sass --watch sass/main.scss:main.css```.
