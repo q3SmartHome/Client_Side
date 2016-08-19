@@ -11,10 +11,13 @@ On the personal dashboard, users can see the temperature readings, status of the
 SmartHome is a fully decoupled app. It consists of a client side (Firebase) website, server side (Heroku) API, PostgreSQL database, and a realtime firebase database that is updated by an Arduino MicroController.
 
 Technologies Used:
-Front-End: AngularJS, AngularFire, HTML5, Sass, Font Awesome
-Server-Side: Node.js, Express, JWT Authentication, Knex.js, PG, bcrypt
-Database: PostgreSQL
-Hardware: Arduino Uno MicroController, Node.js, Johnny-Five, Firebase Realtime Database
+* Front-End: AngularJS, AngularFire, HTML5, Sass, Font Awesome
+* Server-Side: Node.js, Express, JWT Authentication, Knex.js, PG, bcrypt
+* Database: PostgreSQL
+* Hardware: Arduino Uno MicroController, Node.js, Johnny-Five, Firebase Realtime Database
+
+### Hardware Set-Up
+
 
 ### Sass
 To run Sass with the program, ```cd``` into the css folder and run ```sass --watch sass/main.scss:main.css```.
