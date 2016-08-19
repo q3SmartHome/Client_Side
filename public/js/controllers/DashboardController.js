@@ -24,12 +24,11 @@ angular
       'https://smarthomedenver.firebaseio.com/lights'
     );
     $scope.data3 = $firebaseObject(firebaseLights);
-    console.log($scope.data3);
-
 
     $scope.view = 'Dashboard Controller';
 
     $scope.user = LoginService.getUser();
+    $scope.zip = LoginService.getZip();
 
     $http({
       method:'GET',
