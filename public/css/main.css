@@ -1,16 +1,16 @@
 @import "https://fonts.googleapis.com/css?family=Roboto+Mono";
-.card, .modules section, .weather .days, .home .description {
+.card, .modules section, .weather .days, .landing .description {
   border-radius: 3px;
   border: 5px #edae49 solid; }
 
-.btn, .data button, .home form button {
+.btn, .data button, .landing form button {
   color: #fafafa;
   background-color: #30638e;
   font-weight: bold;
   border: 0;
   padding: .5vw;
   border-radius: 3px; }
-  .btn:hover, .data button:hover, .home form button:hover {
+  .btn:hover, .data button:hover, .landing form button:hover {
     color: #072638;
     background-color: #36bcd0; }
 
@@ -142,13 +142,13 @@ i {
     .weather .days img {
       margin-top: 1vw; }
 
-.home {
+.landing {
   display: flex;
   justify-content: center;
   width: 80%;
   flex-direction: column;
   align-items: center; }
-  .home form {
+  .landing form {
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -157,10 +157,10 @@ i {
     margin: 0 0 2vw 0;
     padding: 1vw;
     border-radius: 3px; }
-    .home form input, .home form button {
+    .landing form input, .landing form button {
       margin-bottom: 1vw;
       border-radius: 3px; }
-  .home .description {
+  .landing .description {
     width: 100%;
     color: #2e3e42;
     background-color: #fafafa;
